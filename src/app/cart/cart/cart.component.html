@@ -1,0 +1,13 @@
+
+<div class="row" routerLink="cart">
+  <div class="col-xs-12">
+    <h1>Your Cart</h1>
+    <div *ngIf="getCart().length> 0 ">
+      <div *ngFor="let book of getCart(); let i=index">
+        <p class="my-4 text-2xl"> {{i+1}}. {{book.name}} </p>
+      </div>
+    </div>
+    <div *ngIf="getCart().length==0 ">No  book in your cart</div>
+  </div>
+</div>
+
